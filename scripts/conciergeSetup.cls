@@ -18,12 +18,12 @@ contact jn = new contact(FirstName = 'Jenny', LastName = 'Nunez', Email = 'shane
 insert jn;
 
 // let's have some ticket history for Jenny
-cases.add(new case(Subject = 'Laptop Replacement', ContactId = jn.Id, Status='Closed', Origin='Concierge', CreatedDate=System.now().addDays(-7)));
-cases.add(new case(Subject = 'Badge Renewal', ContactId = jn.Id, Status='Closed', Origin='Concierge', CreatedDate=System.now().addDays(-30)));
-cases.add(new case(Subject = 'Address Change', ContactId = jn.Id, Status='Closed', Origin='Concierge', CreatedDate=System.now().addDays(-67)));
-cases.add(new case(Subject = 'VPN problems', ContactId = jn.Id, Status='Closed', Origin='Concierge', CreatedDate=System.now().addDays(-120)));
-cases.add(new case(Subject = 'Beneficiary Changes (new baby!)', ContactId = jn.Id, Status='Closed', Origin='Concierge', CreatedDate=System.now().addDays(-168)));
-cases.add(new case(Subject = 'Starting maternity leave', ContactId = jn.Id, Status='Closed', Origin='Concierge', CreatedDate=System.now().addDays(-168)));
+cases.add(new case(Subject = 'Laptop Replacement', ContactId = jn.Id, Status='Closed', Origin='Concierge'));
+cases.add(new case(Subject = 'Badge Renewal', ContactId = jn.Id, Status='Closed', Origin='Concierge'));
+cases.add(new case(Subject = 'Address Change', ContactId = jn.Id, Status='Closed', Origin='Concierge'));
+cases.add(new case(Subject = 'VPN problems', ContactId = jn.Id, Status='Closed', Origin='Concierge'));
+cases.add(new case(Subject = 'Beneficiary Changes (new baby!)', ContactId = jn.Id, Status='Closed', Origin='Concierge'));
+cases.add(new case(Subject = 'Starting maternity leave', ContactId = jn.Id, Status='Closed', Origin='Concierge'));
 
 List<Contact> otherEmployees = new List<Contact>();
 otherEmployees.add(new contact(FirstName = 'Isaac', LastName = 'Payne', Title = 'CFO', Phone = '8324728021'));
@@ -33,11 +33,11 @@ otherEmployees.add(new contact(FirstName = 'Shannon', LastName = 'Duffy', Title 
 otherEmployees.add(new contact(FirstName = 'Eric', LastName = 'Igerbase', Title = 'Director Customer Support', Phone = '8324728021'));
 insert otherEmployees;
 
-cases.add(new case(Subject = 'Laptop Replacement', ContactId = otherEmployees[0].Id, Status='Working', Origin='Concierge', Type='IT', CreatedDate=System.now().addMinutes(-1)));
-cases.add(new case(Subject = 'Lost my phone again (sorry!)', ContactId = otherEmployees[1].Id, Status='New', Origin='Concierge', Type='IT', CreatedDate=System.now().addMinutes(-3)));
-cases.add(new case(Subject = 'Laptop screen has weird glowing ring in the middle', ContactId = otherEmployees[2].Id, Status='Working', Origin='Concierge', Type='IT', CreatedDate=System.now().addMinutes(-4)));
-cases.add(new case(Subject = 'VPN is super slow', ContactId = otherEmployees[3].Id, Status='Escalated', Origin='Concierge', Type='IT', CreatedDate=System.now().addMinutes(-7)));
-cases.add(new case(Subject = 'I need Access to Photoshop', ContactId = otherEmployees[4].Id, Status='New', Origin='Concierge', Type='IT', CreatedDate=System.now().addMinutes(-12)));
+cases.add(new case(Subject = 'Laptop Replacement', ContactId = otherEmployees[0].Id, Status='Working', Origin='Concierge', Type='IT'));
+cases.add(new case(Subject = 'Lost my phone again (sorry!)', ContactId = otherEmployees[1].Id, Status='New', Origin='Concierge', Type='IT'));
+cases.add(new case(Subject = 'Laptop screen has weird glowing ring in the middle', ContactId = otherEmployees[2].Id, Status='Working', Origin='Concierge', Type='IT'));
+cases.add(new case(Subject = 'VPN is super slow', ContactId = otherEmployees[3].Id, Status='Escalated', Origin='Concierge', Type='IT'));
+cases.add(new case(Subject = 'I need Access to Photoshop', ContactId = otherEmployees[4].Id, Status='New', Origin='Concierge', Type='IT'));
 
 insert cases;
 
