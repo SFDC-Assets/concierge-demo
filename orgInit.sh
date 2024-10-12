@@ -2,7 +2,7 @@ sf demoutil org create scratch -f config/project-scratch-def.json -d 2 -s -p con
 sfdx force:package:install --package 04t4P000002qm6f --noprompt --wait 50
 
 # to get access to audit field create
-sf project deploy start -p securityStuff/
+sf project deploy start -d securityStuff/
 # give the admin knowledge permission
 sf data update record -s User -w "Name='User User'" -v "UserPermissionsKnowledgeUser=true"
 
